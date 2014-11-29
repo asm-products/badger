@@ -18,9 +18,8 @@
   (resources "/")
   (resources "/react" {:root "react"})
   (GET "/badges/:resource.svg" [resource]
-       (-> (spit (response (badge resource 20)))
-           (status 200)
-           (header "content-type" "image/xml+svg;charset=utf-8")))
+       (-> (response (badge resource 2))
+           (header "content-type" "image/svg+xml;charset=utf-8")))
   (GET "/*" req (page)))
 
 (def http-handler
