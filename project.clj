@@ -1,8 +1,8 @@
 (defproject badger "0.1.0"
   :description "GitHub Badges for Assembly Projects"
   :url "http://badger.asm.co"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "AGPL v3"
+            :url "http://www.gnu.org/licenses/agpl-3.0.html"}
 
   :source-paths ["src/clj" "src/cljs"]
 
