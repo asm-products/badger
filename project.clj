@@ -14,11 +14,11 @@
                  [enlive "1.1.5"]
                  [hiccup "1.0.5"]
                  [om "0.7.3"]
-                 [figwheel "0.1.4-SNAPSHOT"]
+                 [figwheel "0.1.1"]
                  [environ "1.0.0"]
                  [clj-http "1.0.0"]
                  [com.cemerick/piggieback "0.1.3"]
-                 [weasel "0.4.0-SNAPSHOT"]
+                 [weasel "0.4.2"]
                  [leiningen "2.5.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
