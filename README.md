@@ -1,6 +1,9 @@
 # badger
 
 
+<a href="https://assembly.com/badger/bounties"><img src="http://badger.asm.co/badger/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
+
+
 ## Development
 
 Start a REPL (in a terminal: `lein repl`, or from Emacs: open a
