@@ -16,6 +16,7 @@
                  [om "0.7.3"]
                  [figwheel "0.1.4-SNAPSHOT"]
                  [environ "1.0.0"]
+                 [clj-http "1.0.0"]
                  [com.cemerick/piggieback "0.1.3"]
                  [weasel "0.4.0-SNAPSHOT"]
                  [leiningen "2.5.0"]]
@@ -45,7 +46,8 @@
                               :port 3449
                               :css-dirs ["resources/public/css"]}
 
-                   :env {:is-dev true}
+                   :env {:is-dev true
+                         :assembly-url "http://localhost.assembly.com:5000/:product/bounties?count=true"}
 
                    :cljsbuild {:builds {:app {:source-paths ["env/dev/cljs"]}}}}
 

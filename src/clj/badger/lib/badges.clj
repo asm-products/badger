@@ -1,7 +1,17 @@
 (ns badger.lib.badges
-  (:require [badger.templates.task :as task]))
+  (:require [badger.templates.task :as task]
+            [badger.lib.tasks :as tasks]))
+
+(defn- task-count-for
+  [product]
+  (tasks/count-tasks product))
+
+(defn- get-task-count
+  [product]
+  (let [n (task-count-for product)]
+    (task/template n)))
 
 (defn badge
-  [resource n]
+  [product resource]
   (case resource
-    "task" (task/template n)))
+    "task" (get-task-count product)))

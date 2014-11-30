@@ -17,8 +17,8 @@
 (defroutes routes
   (resources "/")
   (resources "/react" {:root "react"})
-  (GET "/badges/:resource.svg" [resource]
-       (-> (response (badge resource 2))
+  (GET "/:product/badges/:resource.svg" [product resource]
+       (-> (response (badge product resource))
            (header "content-type" "image/svg+xml;charset=utf-8")))
   (GET "/*" req (page)))
 
