@@ -24,4 +24,4 @@
                 :y "0"
                 :width width
                 :height "78px"
-                :style "stroke: #979797; stroke-width: 1; fill: none;"}]))
+                :style "stroke: #979797; stroke-width: 0.5; fill: none;"}]))
