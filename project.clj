@@ -14,7 +14,7 @@
                  [enlive "1.1.5"]
                  [hiccup "1.0.5"]
                  [om "0.7.3"]
-                 [figwheel "0.1.4-SNAPSHOT"]
+                 [figwheel "0.1.4-20140813.230224-2"]
                  [environ "1.0.0"]
                  [clj-http "1.0.0"]
                  [com.cemerick/piggieback "0.1.3"]
