@@ -39,7 +39,7 @@
 (defn template
   [n]
   (let [n (h n)
-        width (str (width n) "px")]
+        width (str (width n))]
     (html (xml-declaration "UTF-8")
           (svg width
            [:image {:x "12"
