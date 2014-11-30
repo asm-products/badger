@@ -14,4 +14,4 @@
 (defn badge
   [product resource]
   (case resource
-    "task" (get-task-count product)))
+    "tasks" (get-task-count product)))

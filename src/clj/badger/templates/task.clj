@@ -19,6 +19,7 @@
 (defn- constant
   [n]
   (case (count n)
+    0 32
     1 32
     2 22
     3 19
