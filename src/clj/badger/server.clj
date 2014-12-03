@@ -19,7 +19,8 @@
   (resources "/react" {:root "react"})
   (GET "/:product/badges/:resource.svg" [product resource]
        (-> (response (badge product resource))
-           (header "content-type" "image/svg+xml;charset=utf-8")))
+           (header "content-type" "image/svg+xml;charset=utf-8")
+           (header "cache-control" "no-transform, max-age=0, private, no-cache, no-store")))
   (GET "/*" req (page)))
 
 (def http-handler

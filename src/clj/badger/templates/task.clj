@@ -8,7 +8,7 @@
   (-> (count n)
       (- 1)
       (* 24)
-      (+ 288)))
+      (+ 328)))
 
 ; This is super hacky and should be
 ; pulled out into its own equation.
@@ -36,21 +36,47 @@
   [n]
   (- (width n) (* (count n) (constant n))))
 
+(defn- y-scale-factor []
+  (/ 54 433.2))
+
 (defn template
   [n]
   (let [n (h n)
         width (str (width n))]
-    (html (xml-declaration "UTF-8")
-          (svg width
-           [:image {:x "12"
-                    :y "12"
-                    :viewBox "0 0 88 54"
-                    :width "88px"
-                    :height "54px"
-                    :xlink:href "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAA2CAYAAABDa14eAAADLUlEQVR4nO3cv2sTYRzH8fcdQhBBORF0d3KtbSN0PdOctmggk0sGHSXYHw5Fa9P6gyC1rYGCi0pAECRwttbmLLdmiNWIo+Bf4HLSotCpDpeE6mDzPHfJJe3zGgvf733uoflxz/cuGnVGsTwMTAD9gEH0POAzsOBlrHKgRmkzCYzT3nNr5H1ilFyn8UcNwCiWZ4Bcmw4chodexrorU+ilzTlgOuQ8+3lglNxpAM0olpNAoP+QDhn1MtaaSIGXNi1gvU159jNqlNw1HRiLKICocYmaKM9tHEAHLkQYQsSARE1/6ClaNwD+AvcKrUM1YdHAX+BqhCFEbErUfAo9Res2wV/gpQhDiJDJGeW5LQLoXsZaB+YiDNKKx17GWhEtMkrue+B+G/LsJ2+U3FXY8x5lFMuX8T/54sCxCEL96xf+y+ypl7HeBmnkpc0R/HMbpH3n1sxrlNxAeRVFURRFURRFURRFUWQ1N3sKG0PDwCT+TvyJyBLJ2aK+0ZJNVN4FaWQmU7LrsF3PUHAdu7nzpwEUNoZywEyQYF3kUTZRuSNTaCZTOcJZh7zr2FMAWmFjKMrJa7tcySYqqyIFZjIV9nT9quvYKzpwK8Sm3UJmAj0ZcoYx6K2psohumEAPQm9NlUVEOU3+Sy9NlUV0wwT6I/gLvBhy426wIFEzH3IGf6qcTVTKwGzIzaOUzyYqwhNo17EdwluHfOO78N4LDQv/9tUB4HhIB+qUbfyX+JLo17N/hX2hoSiKoiiKoiiKoiiK0knNzZ76TOo2/oRDB74Cy8Ar17F3ZQ+wU+07B9wDTOBUoLTd7zf+/vp8LF5bh/oC7zNNfQlcl1nknWrfCPAGOCqTtsfNxuK1nGYmU61MlW+6jr0s0n2n2nca+Ebv3WMRpks6rU1TZZ75vcHhXlyACZ3WpqlnzWTqpGDz8xKBDpp+kamy6Huw9AfjAbKr09oE9rvr2J5g8yifE+4WmzqtTVNlprTPgZ8SdQfJgl6fpv7vhrcXwDPRzrF47QdwDf8R08MoF4vXnL0XGo0fRYoDR4AvwLLr2K+DHKV+oTEFXATOBOnVA7bwbziZj8VrHwD+ACz7z6tWbb+iAAAAAElFTkSuQmCC"}]
-           (label "Tasks")
+    (html (svg width
+            [:g {
+              :transform (str "scale(" (y-scale-factor) ") translate(" (/ 12 (y-scale-factor)) " " (/ 12 (y-scale-factor)) ")")
+            }
+              [:path {
+                :fill "#14A2B7"
+                :d "M304.9,80.2H40.1C17.9,80.2,0,62.2,0,40.1S17.9,0,40.1,0h264.8C327,0,345,17.9,345,40.1S327,80.2,304.9,80.2z"
+              }]
+              [:path {
+                :fill "#F15745"
+                :d "M658,80.2H481.4c-22.1,0-40.1-17.9-40.1-40.1S459.3,0,481.4,0H658C680.1,0,698,17.9,698,40.1S680.1,80.2,658,80.2z"
+              }]
+              [:path {
+                :fill "#93BC3F"
+                :d "M393.2,256.7H40.1C17.9,256.7,0,238.8,0,216.6s17.9-40.1,40.1-40.1h353.1c22.1,0,40.1,17.9,40.1,40.1S415.3,256.7,393.2,256.7z"
+              }]
+              [:path {
+                :fill "#454A52"
+                :d "M658,256.7h-88.3c-22.1,0-40.1-17.9-40.1-40.1s17.9-40.1,40.1-40.1H658c22.1,0,40.1,17.9,40.1,40.1S680.1,256.7,658,256.7z"
+              }]
+              [:path {
+                :fill "#FACB34"
+                :d "M658,433.2H216.6c-22.1,0-40.1-17.9-40.1-40.1c0-22.1,17.9-40.1,40.1-40.1H658c22.1,0,40.1,17.9,40.1,40.1C698,415.3,680.1,433.2,658,433.2z"
+              }]
+              [:circle {
+                :fill "#454A52"
+                :cx "40.1"
+                :cy "393.2"
+                :r "40.1"
+              }]
+            ]
+           (label "Bounties")
            [:g
-            [:rect {:x "224"
+            [:rect {:x "264"
                     :y "0"
                     :width "100%"
                     :height "78px"
