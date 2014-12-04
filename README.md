@@ -6,6 +6,9 @@
 
 ## Development
 
+Install leiningen
+`brew install leiningen --devel` if using Homebrew
+
 Start a REPL (in a terminal: `lein repl`, or from Emacs: open a
 clj/cljs file in the project, then do `M-x cider-jack-in`. Make sure
 CIDER is up to date).
