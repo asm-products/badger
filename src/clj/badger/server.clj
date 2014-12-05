@@ -20,7 +20,7 @@
   (GET "/:product/badges/:resource.svg" [product resource]
        (-> (response (badge product resource))
            (header "content-type" "image/svg+xml;charset=utf-8")
-           (header "cache-control" "no-transform, max-age=0, private, no-cache, no-store")))
+           (header "cache-control" "no-transform, max-age=300, public")))
   (GET "/*" req (page)))
 
 (def http-handler
