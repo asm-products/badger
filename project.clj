@@ -19,7 +19,8 @@
                  [clj-http "1.0.0"]
                  [com.cemerick/piggieback "0.1.3"]
                  [weasel "0.4.2"]
-                 [leiningen "2.5.0"]]
+                 [leiningen "2.5.0"],
+                 [com.taoensso/carmine "2.7.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-environ "1.0.0"]]
