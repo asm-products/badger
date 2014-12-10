@@ -16,7 +16,6 @@
   [l]
   (html [:text {:x "112"
                 :y "52"
-                :width "88px"
                 :style "font-family: Helvetica; font-size: 36px; fill: #3e3e3e;"}
          l]))
 

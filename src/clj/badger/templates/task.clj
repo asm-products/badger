@@ -84,7 +84,6 @@
             [:text {:x (text-offset n)
                     :y "52"
                     :text-anchor "middle"
-                    :width "100%"
                     :style "font-family: Courier; font-size: 42px; fill: #f0f0f0"}
              n]]
             (outline width)))))
