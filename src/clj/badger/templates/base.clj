@@ -3,9 +3,9 @@
 
 (defn svg
   [width & elems]
-  (html [:svg {:viewBox (str "0 0 " width " 78")
-               :width (str width "px")
-               :height "78px"
+  (html [:svg {:viewBox "0 0 378 78"
+               :width (str (* 0.3 width) "px")
+               :height "24px"
                :xmlns "http://www.w3.org/2000/svg"
                :xmlns:xlink "http://www.w3.org/1999/xlink"
                :xml:space "preserve"}

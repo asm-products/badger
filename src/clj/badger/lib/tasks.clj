@@ -17,7 +17,7 @@
 (defn count-tasks
   [product]
   (if-not (product-key-exists? product)
-    (with-car (car/set product 
+    (with-car (car/set product
       (-> (url product)
         (http/get {:accept :json
                    :as :json})
