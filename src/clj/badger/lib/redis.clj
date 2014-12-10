@@ -3,7 +3,7 @@
 
 (defn- redis-url
   []
-  (or (System/getenv "REDISCLOUD_URL") "redis://127.0.0.1:6379"))
+  (or (System/getenv "REDISTOGO_URL") "redis://127.0.0.1:6379"))
 
 (defn- conn-spec
   []
