@@ -36,16 +36,16 @@
   [n]
   (- (width n) (* (count n) (constant n))))
 
-(defn- y-scale-factor []
+(defn- custom-image-scale-factor []
   (/ 54 433.2))
 
 (defn template
   [n]
   (let [n (h n)
-        width (str (width n))]
-    (html (svg width
+        width (* (/ 24.0 78) (width n))]
+    (html (svg width 24
             [:g {
-              :transform (str "scale(" (y-scale-factor) ") translate(" (/ 12 (y-scale-factor)) " " (/ 12 (y-scale-factor)) ")")
+              :transform (str "scale(" (custom-image-scale-factor) ") translate(" (/ 12 (custom-image-scale-factor)) " " (/ 12 (custom-image-scale-factor)) ")")
             }
               [:path {
                 :fill "#14A2B7"

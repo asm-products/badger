@@ -2,10 +2,11 @@
   (:require [hiccup.core :refer [html]]))
 
 (defn svg
-  [width & elems]
-  (html [:svg {:viewBox (str "0 0 " width " 78")
+  [width height & elems]
+  (html [:svg {:viewBox (str "0 0 378 78")
                :width (str width "px")
-               :height "78px"
+               :height (str height "px")
+               :preserveAspectRatio "xMinYMin"
                :xmlns "http://www.w3.org/2000/svg"
                :xmlns:xlink "http://www.w3.org/1999/xlink"
                :xml:space "preserve"}
@@ -23,6 +24,6 @@
   [width]
   (html [:rect {:x "0"
                 :y "0"
-                :width (str width "px")
+                :width "378px"
                 :height "78px"
                 :style "stroke: #979797; stroke-width: 0.5; fill: none;"}]))
