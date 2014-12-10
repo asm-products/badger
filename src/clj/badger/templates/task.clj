@@ -42,7 +42,7 @@
 (defn template
   [n]
   (let [n (h n)
-        width (* (/ 24.0 78) (width n))]
+        width (width n)]
     (html (svg width 24
             [:g {
               :transform (str "scale(" (custom-image-scale-factor) ") translate(" (/ 12 (custom-image-scale-factor)) " " (/ 12 (custom-image-scale-factor)) ")")
@@ -78,7 +78,7 @@
            [:g
             [:rect {:x "264"
                     :y "0"
-                    :width "100%"
+                    :width (- width 264)
                     :height "78px"
                     :style "fill: #3e3e3e"}]
             [:text {:x (text-offset n)

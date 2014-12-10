@@ -4,7 +4,6 @@
 (defn svg
   [width height & elems]
   (html [:svg {:viewBox (str "0 0 378 78")
-               :width (str width "px")
                :height (str height "px")
                :preserveAspectRatio "xMinYMin"
                :xmlns "http://www.w3.org/2000/svg"
@@ -24,6 +23,6 @@
   [width]
   (html [:rect {:x "0"
                 :y "0"
-                :width "378px"
+                :width (str width)
                 :height "78px"
                 :style "stroke: #979797; stroke-width: 0.5; fill: none;"}]))
