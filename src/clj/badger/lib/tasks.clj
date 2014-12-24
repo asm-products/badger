@@ -23,6 +23,6 @@
                    :as :json})
         (:body)
         (:total))))
-    (with-car (car/expire product 300)))
+    (with-car (car/expire product 60)))
   (with-car (car/get product)))
 
