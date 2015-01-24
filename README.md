@@ -1,7 +1,7 @@
 # badger
 
 
-<a href="https://assembly.com/badger/bounties"><img src="http://badger.asm.co/badger/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
+<a href="https://assembly.com/badger/bounties?utm_campaign=assemblage&utm_source=badger&utm_medium=repo_badge"><img src="http://badger.asm.co/badger/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
 
 
 ## Development
